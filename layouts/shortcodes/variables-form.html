@@ -1,0 +1,230 @@
+{{ $page := .Page }}
+{{ with $page.Params.variables }}
+<div class="variables-form">
+    <h2>Personnalisez l'article</h2>
+    <form id="articleCustomization" class="customization-form">
+        {{ range . }}
+        <div class="form-group">
+            <label for="{{ .name }}">{{ .label }}</label>
+            <input type="text"
+                   id="{{ .name }}"
+                   name="{{ .name }}"
+                   value="{{ .default }}"
+                   data-default="{{ .default }}"
+                   data-validation='{{ .validation | default "text" }}'
+                   data-pattern='{{ .pattern | default "" }}'
+                   class="form-control">
+            <span class="validation-message"></span>
+        </div>
+        {{ end }}
+        <div class="form-actions">
+            <button type="button" id="resetVariables" class="btn btn-secondary">Réinitialiser</button>
+            <button type="button" id="saveVariables" class="btn btn-primary">Sauvegarder</button>
+        </div>
+        <div class="form-note">Les valeurs sont sauvegardées localement dans votre navigateur</div>
+    </form>
+</div>
+{{ end }}
+
+
+<style>
+    .variables-form {
+        background: #2c3e50;
+        color: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 2rem 0;
+    }
+
+    .variables-form h2 {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #456;
+        border-radius: 4px;
+        background: white;
+        color: #333;
+    }
+
+    .form-group input.invalid {
+        border-color: #ff4444;
+        background-color: #fff8f8;
+    }
+
+    .validation-message {
+        color: #ff4444;
+        font-size: 0.8rem;
+        min-height: 1rem;
+        display: block;
+        margin-top: 0.25rem;
+    }
+
+    .form-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background: #3498db;
+        color: white;
+    }
+
+    .btn-secondary {
+        background: #95a5a6;
+        color: white;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    .form-note {
+        font-size: 0.8rem;
+        opacity: 0.8;
+        margin-top: 1rem;
+        font-style: italic;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('articleCustomization');
+        const variables = document.querySelectorAll('.article-variable');
+        const pageId = window.location.pathname;
+
+        // Build a default values object
+        const defaultsValues = {};
+
+        form.querySelectorAll('input').forEach(input => {
+            // the default value is stored in the data-default attribute
+            let defaultValue = input.dataset.default;
+            let name = input.name;
+            defaultsValues[name] = defaultValue;
+        });
+
+        // Validation rules
+        const validations = {
+            text: {
+                validate: (value) => true,
+                message: ''
+            },
+            number: {
+                validate: (value) => !isNaN(value) && value.trim() !== '',
+                message: 'Veuillez entrer un nombre valide'
+            },
+            regex: {
+                validate: (value, pattern) => new RegExp(pattern).test(value),
+                message: 'La valeur ne correspond pas au format requis'
+            }
+        };
+
+        function validateInput(input) {
+            const validationType = input.dataset.validation;
+            const pattern = input.dataset.pattern;
+            const value = input.value;
+
+            const validation = validations[validationType];
+            const isValid = validation.validate(value, pattern);
+
+            input.classList.toggle('invalid', !isValid);
+            const messageEl = input.parentNode.querySelector('.validation-message');
+            messageEl.textContent = isValid ? '' : validation.message;
+
+            return isValid;
+        }
+
+        function updateVariables() {
+            const formData = new FormData(form);
+            let allValid = true;
+
+            form.querySelectorAll('input').forEach(input => {
+                if (!validateInput(input)) {
+                    allValid = false;
+                }
+            });
+
+            if (!allValid) return;
+
+            variables.forEach(variable => {
+                const varName = variable.dataset.varName;
+                const newValue = formData.get(varName);
+                if (newValue) {
+                    variable.textContent = newValue;  // Updated this line
+                    if (newValue !== defaultsValues[varName]) {
+                        variable.classList.add('custom-value');
+                    } else {
+                        variable.classList.remove('custom-value');
+                    }
+                }
+            });
+        }
+
+        // Load saved values
+        function loadSavedValues() {
+            const saved = localStorage.getItem(`variables-${pageId}`);
+            if (saved) {
+                const values = JSON.parse(saved);
+                Object.entries(values).forEach(([name, value]) => {
+                    const input = form.querySelector(`[name="${name}"]`);
+                    if (input) {
+                        input.value = value;
+                    }
+                });
+            }
+            updateVariables();
+        }
+
+        // Save values
+        document.getElementById('saveVariables').addEventListener('click', () => {
+            const values = {};
+            new FormData(form).forEach((value, key) => {
+                values[key] = value;
+            });
+            localStorage.setItem(`variables-${pageId}`, JSON.stringify(values));
+            alert('Variables sauvegardées !');
+        });
+
+        // Reset values
+        document.getElementById('resetVariables').addEventListener('click', () => {
+            form.reset();
+
+            variables.forEach(variable => {
+                const varName = variable.dataset.varName;
+                variable.querySelector('.var-content').textContent = defaultsValues[varName];
+                variable.classList.remove('custom-value');
+            });
+
+        });
+
+        form.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', updateVariables);
+        });
+
+
+        // Load saved values on page load
+        loadSavedValues();
+    });
+</script>

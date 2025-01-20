@@ -19,7 +19,7 @@ Si vous voulez commencer à rendre votre maison intelligente, l'éclairage conne
 
 ## Rapide tour des possibles
 
-> [!TIP]
+> [!TIP] Tl;Dr
 > Pour aller plus vite, faites-moi confiance et passez directement à la partie [mes recommandations]({{< relref "#mes-recommandations" >}}).
 
 ### Ampoules connectées
@@ -28,7 +28,8 @@ Si vous voulez commencer à rendre votre maison intelligente, l'éclairage conne
   {{< card 
     link="#" 
     image="ampoule-hue.png" 
-    options="800x q100" 
+    options="800x800 q100"
+    method="crop"
     title="Ampoule connectée" 
     subtitle="Ici une ampoule Philips Hue, le top du marché. Compter quand même le prix d'achat du hub et de l'ampoule..." 
     tag="Env. 80 €"
@@ -47,6 +48,9 @@ Les ampoules connectées sont une bonne façon de débuter, mais elles souffrent
 
 Les prises connectées sont une alternative intéressante : elles sont moins chères, plus simples à installer, et vous pouvez y brancher n'importe quel appareil électrique.
 Elles sont généralement compatibles WiFi ou Zigbee (et permettent donc d'étendre votre réseau Zigbee à moindre frais).
+
+J'utilise [ces prises de chez Aubess](https://fr.aliexpress.com/item/1005006133723096.html?spm=a2g0o.productlist.main.3.4577UmJRUmJRsT), 
+elles ne m'ont jamais posé de problème.
 
 Dans Homeassistant, vous pouvez transformer une prise connectée en "lumière" très simplement [depuis l'interface utilisateur](https://www.home-assistant.io/integrations/switch_as_x/).
 
@@ -132,34 +136,6 @@ Ma recommandation est très simple. Ce qui est utile, c'est de pouvoir éclairer
 que la lumière ne clignote pas, ne face pas mal aux yeux, soit naturelle, et que les leds individuelles ne 
 soient pas visibles (c'est plus esthétique).
 
-{{< cards >}}
-  {{< card 
-    link="https://www.amazon.fr/dp/B0BRV1PPVP" 
-    image="ruban-led.jpg" 
-    options="800x q100" 
-    title="Le ruban de led" 
-    subtitle="528 leds par mètre" 
-    tag="41 €" 
-    tagType="info" >}}
-  {{< card 
-    link="https://fr.aliexpress.com/item/1005004996675789.html" 
-    image="dimmer.jpg" 
-    options="800x q100" 
-    title="Le dimmer connecté" 
-    subtitle="Compatible Tuya, version générique" 
-    tag="17 €" 
-    tagType="info" >}}
-  {{< card 
-    link="https://fr.aliexpress.com/item/4001260747482.html?spm=a2g0o.order_list.order_list_main.11.1ca15e5bSHgnnP&gatewayAdapt=glo2fra" 
-    image="transfo.jpg" 
-    options="800x q100" 
-    title="Le transformateur"
-    subtitle="24 volts, et 200 watts pour être tranquille" 
-    tag="15 €" 
-    tagType="info" >}}
-{{< /cards >}}
-
-
 Il vous faut :
 
 - Un ruban de couleur fixe, blanc chaud ou naturel (2700K à 4000K) : c'est le plus lumineux, et le plus agréable à l'oeil.
@@ -175,11 +151,16 @@ Il vous faut :
 En bref, cela veut dire :
 
 - Acheter N rubans pour le linéaire total de ce que vous voulez couvrir. Les rubans de chez [BTF-LIGHTING en FCOB](https://www.amazon.fr/dp/B0BRV1PPVP) sont vraiment superbes.
-  - Pensez à choisir la couleur : blanc chaud (3000 K) ou blanc naturel (4000 K). Je trouve le blanc froid plus désagréable.
-    - Astuce pour le choix de couleur, elles sont exposées dans les magasins de bricolage. On se rends assez mal compte sur les photos internet.
-    - Je suis parti avec des rubans 3000 K, et ils sont très bien, même pour travailler sur ordinateur. Pour du dessin, ce n'est probablement pas un bon choix.
-  - Prenez bien la version 528 leds/mètre, c'est la plus lumineuse, et ça en vaut franchement le coup !
-  - Il existe une version 5 mètres, mais je vous conseille de prendre plutot des 10 mètres, et de découper le ruban si besoin. Ils coûtent moins cher.
+  > [!TIP] Astuce
+  > Pensez à choisir la couleur : blanc chaud (3000 K) ou blanc naturel (4000 K). Je trouve le blanc froid plus désagréable.
+  > 
+  > Les couleurs sont exposées dans les magasins de bricolage. On se rend assez mal compte sur les photos internet.
+  > Je suis parti avec des rubans 3000 K, et ils sont très bien, même pour travailler sur ordinateur. 
+  > Pour du dessin, ce n'est probablement pas un bon choix.
+  > 
+  > **Prenez bien la version 528 leds/mètre, c'est la plus lumineuse, et ça en vaut franchement le coup !**
+  > Il existe une version 5 mètres, mais je vous conseille de prendre plutôt des 10 mètres, et de découper le ruban si 
+  > besoin. Ils coûtent moins cher.
 - Pour chaque emplacement que vous souhaitez controller, vous aurez besoin :
   - D'un dimmer wifi, tel que mentionné plus tôt. Ils sont [en vente sur AliExpress](https://fr.aliexpress.com/item/1005004996675789.html), et sont compatibles Tuya.
     - J'ai choisi les dimmers BTF-LIGHTING, pour m'assurer de leur bon fonctionnement avec les rubans. Ils sont probablement compatibles toutes marques, et il existe d'autres vendeurs.
@@ -189,6 +170,36 @@ En bref, cela veut dire :
     - Pour moins de ruban, vous pouvez faire le calcul de la tension minimum : le ruban BTF-LIGHTING consomme 14W/mètre, et il vous faut 20% de marge (mais la formule n'est peut-être pas aussi simple qu'elle en à l'air...).
       - Personnellement, je ne me suis pas soucié de différer les transformateurs : le wattage est la tension maximale délivrable, mais les rubans n'utilisent que ce dont ils ont besoin. 
       - La différence de prix ne vaut pas le stress de se tromper.
+
+{{< cards >}}
+  {{< card 
+    link="https://www.amazon.fr/dp/B0BRV1PPVP" 
+    image="ruban-led.jpg" 
+    options="800x800 q100"
+    method="crop"
+    title="Le ruban de led" 
+    subtitle="528 leds par mètre" 
+    tag="41 €" 
+    tagType="info" >}}
+  {{< card 
+    link="https://fr.aliexpress.com/item/1005004996675789.html" 
+    image="dimmer.jpg" 
+    options="800x800 q100"
+    method="crop"
+    title="Le dimmer connecté" 
+    subtitle="Compatible Tuya, version générique" 
+    tag="17 €" 
+    tagType="info" >}}
+  {{< card 
+    link="https://fr.aliexpress.com/item/4001260747482.html?spm=a2g0o.order_list.order_list_main.11.1ca15e5bSHgnnP&gatewayAdapt=glo2fra" 
+    image="transfo.jpg" 
+    options="800x800 q100"
+    method="crop"
+    title="Le transformateur"
+    subtitle="24 volts, et 200 watts pour être tranquille" 
+    tag="15 €" 
+    tagType="info" >}}
+{{< /cards >}}
 
 Si vous n'êtes pas équipés avec un materiel à tout faire électrique, je vous conseille aussi d'acheter :
 
