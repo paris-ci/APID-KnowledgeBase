@@ -24,6 +24,10 @@ Si vous voulez commencer à rendre votre maison intelligente, l'éclairage conne
 
 ### Ampoules connectées
 
+{{< cards >}}
+  {{< card link="#" image="ampoule-hue.png" options="800x q100" title="Ampoule connectée" subtitle="Ici une ampoule Philipps Hue, le top du marché. Compter quand même le prix d'achat du hub et de l'ampoule..." tag="Env. 80 €" tagType="info" >}}
+{{< /cards >}}
+
 Les ampoules connectées sont une bonne façon de débuter, mais elles souffrent malheureusement de plusieurs inconvénients majeurs : 
 
 - Elles sont chères : comptez une vingtaine d'euros par ampoule.
@@ -121,6 +125,13 @@ Ma recommandation est très simple. Ce qui est utile, c'est de pouvoir éclairer
 que la lumière ne clignote pas, ne face pas mal aux yeux, soit naturelle, et que les leds individuelles ne 
 soient pas visibles (c'est plus esthétique).
 
+{{< cards >}}
+  {{< card link="https://www.amazon.fr/dp/B0BRV1PPVP" image="ruban-led.jpg" options="800x q100" title="Le ruban de led" subtitle="528 leds par mètre" tag="41 €" tagType="info" >}}
+  {{< card link="https://fr.aliexpress.com/item/1005004996675789.html" image="dimmer.jpg" options="800x q100" title="Le dimmer connecté" subtitle="Compatible Tuya, version générique" tag="17 €" tagType="info" >}}
+  {{< card link="https://fr.aliexpress.com/item/4001260747482.html?spm=a2g0o.order_list.order_list_main.11.1ca15e5bSHgnnP&gatewayAdapt=glo2fra" image="transfo.jpg" options="800x q100" title="Le transformateur" subtitle="24 volts, et 200 watts pour être tranquille" tag="15 €" tagType="info" >}}
+{{< /cards >}}
+
+
 Il vous faut :
 
 - Un ruban de couleur fixe, blanc chaud ou naturel (2700K à 4000K) : c'est le plus lumineux, et le plus agréable à l'oeil.
@@ -145,7 +156,7 @@ En bref, cela veut dire :
   - D'un dimmer wifi, tel que mentionné plus tôt. Ils sont [en vente sur AliExpress](https://fr.aliexpress.com/item/1005004996675789.html), et sont compatibles Tuya.
     - J'ai choisi les dimmers BTF-LIGHTING, pour m'assurer de leur bon fonctionnement avec les rubans. Ils sont probablement compatibles toutes marques, et il existe d'autres vendeurs.
     - Dans tous les cas, vous cherchez un dimmer 2-pins. Pas de RGB ou de RGBCCT.
-  - D'un transformateur 24 V, aussi [sur AliExpress](https://fr.aliexpress.com/item/4001260747482.html).
+  - D'un transformateur 24 V, aussi [sur AliExpress](https://fr.aliexpress.com/item/4001260747482.html?spm=a2g0o.order_list.order_list_main.11.1ca15e5bSHgnnP&gatewayAdapt=glo2fra).
     - Pour 10 mètres de ruban, partez pour du 200 W
     - Pour moins de ruban, vous pouvez faire le calcul de la tension minimum : le ruban BTF-LIGHTING consomme 14W/mètre, et il vous faut 20% de marge (mais la formule n'est peut-être pas aussi simple qu'elle en à l'air...).
       - Personnellement, je ne me suis pas soucié de différer les transformateurs : le wattage est la tension maximale délivrable, mais les rubans n'utilisent que ce dont ils ont besoin. 
