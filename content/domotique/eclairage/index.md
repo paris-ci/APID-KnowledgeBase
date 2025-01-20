@@ -25,7 +25,14 @@ Si vous voulez commencer à rendre votre maison intelligente, l'éclairage conne
 ### Ampoules connectées
 
 {{< cards >}}
-  {{< card link="#" image="ampoule-hue.png" options="800x q100" title="Ampoule connectée" subtitle="Ici une ampoule Philipps Hue, le top du marché. Compter quand même le prix d'achat du hub et de l'ampoule..." tag="Env. 80 €" tagType="info" >}}
+  {{< card 
+    link="#" 
+    image="ampoule-hue.png" 
+    options="800x q100" 
+    title="Ampoule connectée" 
+    subtitle="Ici une ampoule Philips Hue, le top du marché. Compter quand même le prix d'achat du hub et de l'ampoule..." 
+    tag="Env. 80 €"
+    tagType="info" >}}
 {{< /cards >}}
 
 Les ampoules connectées sont une bonne façon de débuter, mais elles souffrent malheureusement de plusieurs inconvénients majeurs : 
@@ -110,7 +117,7 @@ Vous pouvez aussi vous renseigner auprès de Shelly, qui propose des modules de 
 
 Les rubans de LED sont pour moi le **meilleur moyen de commencer avec la domotique**, mais aussi de gérer un éclairage de qualité.
 
-#### Les différent types de rubans
+#### Les différents types de rubans
 
 Il existe plusieurs types de rubans de LED, et il est important de bien les distinguer :
 
@@ -126,9 +133,30 @@ que la lumière ne clignote pas, ne face pas mal aux yeux, soit naturelle, et qu
 soient pas visibles (c'est plus esthétique).
 
 {{< cards >}}
-  {{< card link="https://www.amazon.fr/dp/B0BRV1PPVP" image="ruban-led.jpg" options="800x q100" title="Le ruban de led" subtitle="528 leds par mètre" tag="41 €" tagType="info" >}}
-  {{< card link="https://fr.aliexpress.com/item/1005004996675789.html" image="dimmer.jpg" options="800x q100" title="Le dimmer connecté" subtitle="Compatible Tuya, version générique" tag="17 €" tagType="info" >}}
-  {{< card link="https://fr.aliexpress.com/item/4001260747482.html?spm=a2g0o.order_list.order_list_main.11.1ca15e5bSHgnnP&gatewayAdapt=glo2fra" image="transfo.jpg" options="800x q100" title="Le transformateur" subtitle="24 volts, et 200 watts pour être tranquille" tag="15 €" tagType="info" >}}
+  {{< card 
+    link="https://www.amazon.fr/dp/B0BRV1PPVP" 
+    image="ruban-led.jpg" 
+    options="800x q100" 
+    title="Le ruban de led" 
+    subtitle="528 leds par mètre" 
+    tag="41 €" 
+    tagType="info" >}}
+  {{< card 
+    link="https://fr.aliexpress.com/item/1005004996675789.html" 
+    image="dimmer.jpg" 
+    options="800x q100" 
+    title="Le dimmer connecté" 
+    subtitle="Compatible Tuya, version générique" 
+    tag="17 €" 
+    tagType="info" >}}
+  {{< card 
+    link="https://fr.aliexpress.com/item/4001260747482.html?spm=a2g0o.order_list.order_list_main.11.1ca15e5bSHgnnP&gatewayAdapt=glo2fra" 
+    image="transfo.jpg" 
+    options="800x q100" 
+    title="Le transformateur"
+    subtitle="24 volts, et 200 watts pour être tranquille" 
+    tag="15 €" 
+    tagType="info" >}}
 {{< /cards >}}
 
 
@@ -137,7 +165,7 @@ Il vous faut :
 - Un ruban de couleur fixe, blanc chaud ou naturel (2700K à 4000K) : c'est le plus lumineux, et le plus agréable à l'oeil.
 - Une densité de LED de **528 LED par mètre** : c'est la densité la plus élevée, et donc la plus lumineuse. Oui c'est beaucoup. Oui c'est bien. Trust me.
 - Une tension de 24 V : la tension restera plus élevé et vous aurez moins de différence d'éclairage au bout du ruban.
-- Une longueur de 10 mètres maximum par alimentation : au delà, vous aurez des pertes de tension trop fortes : il faudra rajouter une alimentation.
+- Une longueur de 10 mètres maximum par alimentation : au-delà, vous aurez des pertes de tension trop fortes : il faudra rajouter une alimentation.
   - 10 mètres, c'est très lumineux, surtout à 528 leds par mètre. Les rubans que vous achetez sont découpables aux ciseaux.
   - Pour une petite pièce 5 mètres suffisent, mais je vous conseille quand même d'acheter 10 mètres et de prévoir deux rubans parallèles et côte-à-cote pour plus de luminosité de pic et moins d'usure des rubans.
 - Pour contrôler la luminosité, un dimmer wifi (Tuya) 200W. Ils sont compatibles homeassistant.
