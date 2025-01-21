@@ -4,6 +4,8 @@ draft = false
 title = 'Installer HomeAssistant'
 categories = ['Domotique']
 description = "Installation et configuration de Home Assistant, le cerveau de votre maison connectée."
+
+next = '/domotique/systemes/'
 +++
 
 Si vous voulez une maison vraiment intelligente, Home Assistant est incontournable :
