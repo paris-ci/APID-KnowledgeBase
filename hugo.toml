@@ -4,6 +4,9 @@ title = 'Jardin virtuel'
 
 removePathAccents = true
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [menu]
 [[menu.main]]
 name = "Domotique"
@@ -44,3 +47,25 @@ description = "Articles, conseils et recommandations sur la domotique, la maison
 [params.sysadm]
 title = "Administration Sytème"
 description = "Articles et pense-bêtes sur l'administration système, la sécurité informatique et les réseaux."
+
+[params.page]
+width = 'wide'
+
+[params.comments]
+enable = true
+type = "giscus"
+
+# https://giscus.app/
+[params.comments.giscus]
+
+repo = "paris-ci/APID-KnowledgeBase"
+repoId = "R_kgDONtH3Dw"
+category = "General"
+categoryId = "DIC_kwDONtH3D84CmMN6"
+# mapping: pathname
+# strict: 0
+# reactionsEnabled: 1
+# emitMetadata: 0
+# inputPosition: top
+lang = "fr"
+# theme: noborder_dark
