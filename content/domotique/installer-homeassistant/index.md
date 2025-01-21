@@ -1,7 +1,7 @@
 +++
 date = '2025-01-21T00:00:00+01:00'
 draft = false
-title = 'Installer HomeAssistant'
+title = 'Installer Home Assistant'
 categories = ['Domotique']
 description = "Installation et configuration de Home Assistant, le cerveau de votre maison connectée."
 
