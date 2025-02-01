@@ -8,8 +8,8 @@ description = "Un tour des solutions pour rendre votre éclairage intelligent, b
 
 Si vous voulez commencer à rendre votre maison intelligente, l'éclairage connecté est un *must* :
 
-- C'est un des éléments les plus simples à mettre en place : vous n'avez généralement besoin que d'une prise, d'un peu de place, et de moins d'une centaine d'euros par pièce.
-- C'est aussi un élément très utile : vous allumez automatiquement les lumières en arrivant, ou si vous entrez dans votre cuisine avec les mains pleines.
+- C'est un des éléments les plus simples à mettre en place : vous avez juste besoin d'une prise, d'un peu de place, et de moins d'une centaine d'euros par pièce.
+- C'est aussi un élément très utile : imaginez vos lumières s'allument automatiquement quand vous arrivez ou quand vous entrez dans votre cuisine avec les mains pleines.
 
 > [!IMPORTANT]
 > **En bref :** installez et utilisez des rubans de led de qualité, c'est beau, c'est lumineux, c'est pas cher, facile à installer, et ça se contrôle avec Homeassistant.
@@ -57,7 +57,7 @@ mais présentent de nombreux avantages
 {{< /column >}}
 {{< column >}}
 
-👎️ Les interrupteurs vendus dans les magasins de bricolage, controllables radio (généralement 433 mHz)
+👎️ Les interrupteurs vendus dans les magasins de bricolage, contrôlables radio (généralement 433 mHz)
 
 Je vous les déconseille — la communication radio n'est pas fiable du tout.
 
@@ -65,7 +65,7 @@ Je vous les déconseille — la communication radio n'est pas fiable du tout.
   - Quand vous voulez commander plusieurs lumières avec un seul interrupteur, certaines s'allument, d'autres ne reçoivent pas le signal et restent éteintes.
     Si vous rappuyez sur le bouton, vous risquez d'allumer certaines lampes et d'en éteindre d'autres : un cauchemar.
   - Vous ne pouvez pas les commander via des automatisations avec Homeassistant sans acheter d'émetteur/récepteur 433 mHz, et sans décoder le protocole radio.
-  - Même quand un interrupteur commande une seule et unique lampe, la transmission peut mettre quelques secondes, ce qui donne un délai quand on appuie sur l'interrupetur.
+  - Même quand un interrupteur commande une seule et unique lampe, la transmission peut mettre quelques secondes, ce qui donne un délai quand on appuie sur l'interrupteur.
     Si l'on rappuie, la lumière s'éteint à nouveau, c'est frustrant !
 {{% /details %}}
 {{< /column >}}
@@ -94,7 +94,7 @@ Vous devrez bloquer les interrupteurs existants en position ON...
 
 #### Alternatives
 
-Il existe des modules qui se greffent derrière vos interrupteurs existants, et qui permettent de controller de façon identique les micro-modules.
+Il existe des modules qui se greffent derrière vos interrupteurs existants, et qui permettent de contrôler de façon identique les micro-modules.
 Cela vous permet d'utiliser des interrupteurs de meilleure qualité, mais cela requiert une boite de dérivation pas trop remplie et un peu de place derrière l'interrupteur.
 
 Vous pouvez aussi vous renseigner auprès de Shelly, qui propose des modules de qualité, mais un peu plus chers. Je n'ai pas testé.
@@ -138,13 +138,13 @@ Il existe plusieurs types de rubans de LED, et il est important de bien les dist
 
 - Rubans RGB : ils permettent de changer la couleur de la lumière, mais ne sont pas très lumineux. Les leds sont généralement espacées, et la lumière n'est pas très homogène.
 - Rubans RGBW : ils permettent de changer la couleur de la lumière, mais disposent aussi de leds blanches. Ils sont plus lumineux que les rubans RGB, et la lumière est plus homogène. Ca reste très moyen.
-- Rubans RGBWW : ils permettent de changer la couleur de la lumière, mais disposent aussi de leds blanches chaudes et froides. Ils sont un peu plus lumineux, mais vous ne pouvez pas utiliser les leds RGB et WW en même temps. Ca reste médiocre.
+- Rubans RGBWW : ils permettent de changer la couleur de la lumière, mais disposent aussi de leds blanches chaudes et froides. Ils sont un peu plus lumineux, mais vous ne pouvez pas utiliser les leds RGB et WW en même temps. Cela reste médiocre.
 - Rubans de couleur fixe : un seul type de led, généralement blanc chaud, froid ou naturel. Ce sont les rubans les plus lumineux.
 
 Chaque type de ruban est vendu en différentes densités de LED par mètre, et sous différentes tensions.
 
 Ma recommandation est très simple. Ce qui est utile, c'est de pouvoir éclairer la pièce avec un seul ruban,
-que la lumière ne clignote pas, ne face pas mal aux yeux, soit naturelle, et que les leds individuelles ne
+que la lumière ne clignote pas, ne fasse pas mal aux yeux, soit naturelle, et que les leds individuelles ne
 soient pas visibles (c'est plus esthétique)...
 {{% /details %}}
 
