@@ -6,7 +6,7 @@ categories = ['Domotique']
 description = "Un tour des solutions pour rendre votre éclairage intelligent, bien fait et pas trop cher."
 +++
 
-Si vous voulez commencer à rendre votre maison intelligente, l'éclairage connecté est un *must* :
+Vous avez envie de rendre votre maison intelligente ? Commencez avec l'éclairage connecté ! C'est un *must* :
 
 - C'est un des éléments les plus simples à mettre en place : vous avez juste besoin d'une prise, d'un peu de place, et de moins d'une centaine d'euros par pièce.
 - C'est aussi un élément très utile : imaginez vos lumières s'allument automatiquement quand vous arrivez ou quand vous entrez dans votre cuisine avec les mains pleines.
@@ -19,7 +19,7 @@ Si vous voulez commencer à rendre votre maison intelligente, l'éclairage conne
 
 ## Mes recommandations
 
-Il faut prendre en compte l'existant : toute maison dispose généralement de plafonniers. 
+Tenez compte de l'existant : toute maison dispose généralement de plafonniers. 
 Il faut donc utiliser un système type micro-module pour les contrôler. Dans le cas ou cela vous semble trop fragile 
 (ça l'est !), contentez-vous simplement d'installer des luminaires supplémentaires.
 
@@ -152,13 +152,13 @@ Il vous faut :
 
 - Un ruban de couleur fixe, blanc chaud ou naturel (2700K à 4000K) : c'est le plus lumineux, et le plus agréable à l'oeil.
 - Une densité de LED de **528 LED par mètre** : c'est la densité la plus élevée, et donc la plus lumineuse. Oui c'est beaucoup. Oui c'est bien. Trust me.
-- Une tension de 24 V : la tension restera plus élevé et vous aurez moins de différence d'éclairage au bout du ruban.
+- Une tension de 24 V : la tension restera plus élevée et vous aurez moins de différence d'éclairage au bout du ruban.
 - Une longueur de 10 mètres maximum par alimentation : au-delà, vous aurez des pertes de tension trop fortes : il faudra rajouter une alimentation.
   - 10 mètres, c'est très lumineux, surtout à 528 leds par mètre. Les rubans que vous achetez sont découpables aux ciseaux.
   - Pour une petite pièce 5 mètres suffisent, mais je vous conseille quand même d'acheter 10 mètres et de prévoir deux rubans parallèles et côte-à-cote pour plus de luminosité de pic et moins d'usure des rubans.
 - Pour contrôler la luminosité, un dimmer wifi (Tuya) 200W. Ils sont compatibles homeassistant.
-- Et pour fournir le courant nécéssaire, une alimentation 24V. J'ai utilisé des alimentations 200W, sur-dimensionnées, ce qui évite une usure précoce. 
-  - La plupart des fabricants recommandent de ne pas consommer 80% de la puissance maximale de l'alimentation.
+- Et pour fournir le courant nécessaire, une alimentation 24V. J'ai utilisé des alimentations 200W, sur-dimensionnées, ce qui évite une usure précoce. 
+  - La plupart des fabricants recommandent de ne pas consommer plus de 80% de la puissance maximale de l'alimentation.
 
 
 #### Votre liste de courses
@@ -173,14 +173,14 @@ Il vous faut :
   > 
   > **Prenez bien la version 528 leds/mètre, c'est la plus lumineuse, et ça en vaut franchement le coup !**
   > Il existe une version 5 mètres, mais je vous conseille de prendre plutôt des 10 mètres, et de découper le ruban si 
-  > besoin. Ils coûtent moins cher.
-- Pour chaque emplacement que vous souhaitez controller, vous aurez besoin :
+  > besoin. En plus, ils coûtent moins cher.
+- Pour chaque emplacement que vous souhaitez contrôler, vous aurez besoin :
   - D'un dimmer wifi, tel que mentionné plus tôt. Ils sont [en vente sur AliExpress](https://fr.aliexpress.com/item/1005004996675789.html), et sont compatibles Tuya.
     - J'ai choisi les dimmers BTF-LIGHTING, pour m'assurer de leur bon fonctionnement avec les rubans. Ils sont probablement compatibles toutes marques, et il existe d'autres vendeurs.
     - Dans tous les cas, vous cherchez un dimmer 2-pins. Pas de RGB ou de RGBCCT.
   - D'un transformateur 24 V, aussi [sur AliExpress](https://fr.aliexpress.com/item/4001260747482.html?spm=a2g0o.order_list.order_list_main.11.1ca15e5bSHgnnP&gatewayAdapt=glo2fra).
     - Pour 10 mètres de ruban, partez pour du 200 W
-    - Pour moins de ruban, vous pouvez faire le calcul de la tension minimum : le ruban BTF-LIGHTING consomme 14W/mètre, et il vous faut 20% de marge (mais la formule n'est peut-être pas aussi simple qu'elle en à l'air...).
+    - Pour moins de ruban, vous pouvez faire le calcul de la tension minimum : le ruban BTF-LIGHTING consomme 14W/mètre, et il vous faut 20% de marge (mais la formule n'est peut-être pas aussi simple qu'elle en a l'air...).
       - Personnellement, je ne me suis pas soucié de différer les transformateurs : le wattage est la tension maximale délivrable, mais les rubans n'utilisent que ce dont ils ont besoin. 
       - La différence de prix ne vaut pas le stress de se tromper.
 
@@ -258,7 +258,7 @@ Les ampoules connectées sont une bonne façon de débuter, mais elles souffrent
 Si vous voulez des leds non pas pour éclairer, mais pour décorer, regardez du côté de [WLED](https://kno.wled.ge/), 
 qui permet de contrôler des rubans de LED WS2812B (les rubans adressables) avec des effets de lumière très sympas.
 
-Les rubans WS2812B dont moins lumineux, mais vous pouvez changer la couleur de chaque led individuellement, 
+Les rubans WS2812B sont moins lumineux, mais vous pouvez changer la couleur de chaque led individuellement, 
 ce qui vous permet de faire des effets de type vague de couleur. 
 
 {{< youtube D_URUFJvLOo >}}
