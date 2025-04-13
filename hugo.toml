@@ -4,6 +4,8 @@ title = 'Jardin virtuel'
 
 removePathAccents = true
 
+enableRobotsTXT = false # It's in the static folder
+
 [markup.goldmark.renderer]
 unsafe = true
 
