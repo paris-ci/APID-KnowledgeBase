@@ -50,6 +50,10 @@ description = "Articles, conseils et recommandations sur la domotique, la maison
 title = "Administration Sytème"
 description = "Articles et pense-bêtes sur l'administration système, la sécurité informatique et les réseaux."
 
+[author]
+name = "Arthur"
+email = ""
+
 [params.page]
 width = 'wide'
 
